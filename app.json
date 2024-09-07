@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "nextflix",
+    "slug": "nextflix",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#161b21"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.samay15jan.nextflix"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#161b21"
+      }
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d9f4b5ac-4ccd-4387-85b6-1380361016ab"
+      }
+    }
+  }
+}
