@@ -4,10 +4,13 @@
   # Which nixpkgs channel to use.
   channel = "stable-23.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
-  packages = [pkgs.nodejs_20];
+  packages = [
+    pkgs.nodejs_20
+    pkgs.temurin-jre-bin-20
+  ];
   # Sets environment variables in the workspace
   env = {
-    EXPO_USE_FAST_RESOLVER = 1; 
+    EXPO_USE_FAST_RESOLVER = 1;
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
@@ -21,25 +24,25 @@
       };
       # Runs when a workspace restarted
       onStart = {
-        connect-device = ''
-          adb -s localhost:5554 wait-for-device
-        '';
-        android = ''
-          npm run android -- --port 5554 --tunnel
-        '';
+        #connect-device = ''
+        #   adb -s localhost:5554 wait-for-device
+        # '';
+        # android = ''
+        #   npm run android -- --port 5554 --tunnel
+        # '';
       };
     };
     # Enable previews and customize configuration
     previews = {
-      enable = true;
+      enable = false;
       previews = {
         web = {
-          command = ["npm" "run" "web" "--" "--port" "$PORT"];
+          command = [ "npm" "run" "web" "--" "--port" "$PORT" ];
           manager = "web";
         };
         android = {
           # noop
-          command = ["tail" "-f" "/dev/null"];
+          command = [ "tail" "-f" "/dev/null" ];
           manager = "web";
         };
       };

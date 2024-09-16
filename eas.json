@@ -1,20 +1,31 @@
 {
   "cli": {
-    "version": ">= 12.1.0",
+    "version":
+     ">= 12.3.0",
     "appVersionSource": "remote"
   },
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+        "TMDB_API": "YOUR API KEY"
+      }
     },
     "preview": {
-      "ios": {
-        "simulator": true
+      "distribution": "internal",
+      "channel": "preview",
+      "env": {
+        "TMDB_API": "YOUR API KEY"
       }
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "TMDB_API": "YOUR API KEY"
+      }
     }
   },
   "submit": {

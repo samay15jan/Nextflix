@@ -3,8 +3,8 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "lint": "expo lint"
   },
   "dependencies": {
@@ -13,13 +13,17 @@
     "@expo/vector-icons": "^14.0.2",
     "expo": "~51.0.28",
     "expo-router": "~3.5.23",
+    "expo-system-ui": "^3.0.7",
+    "expo-updates": "~0.25.24",
     "react": "18.2.0",
     "react-native": "0.74.5",
-    "react-native-webview": "13.8.6"
+    "react-native-webview": "13.8.6",
+    "expo-splash-screen": "~0.27.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "eslint": "^8.57.0"
+    "eslint": "^8.57.0",
+    "react-native-dotenv": "^3.4.11"
   },
   "private": true
 }

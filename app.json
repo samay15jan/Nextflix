@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "nextflix",
+    "name": "Nextflix",
     "slug": "nextflix",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,8 +19,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#161b21"
-      }
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.samay15jan.nextflix"
     },
     "plugins": [
       "expo-router"
@@ -32,6 +33,12 @@
       "eas": {
         "projectId": "d9f4b5ac-4ccd-4387-85b6-1380361016ab"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/d9f4b5ac-4ccd-4387-85b6-1380361016ab"
     }
   }
 }

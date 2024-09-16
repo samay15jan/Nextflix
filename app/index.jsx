@@ -3,12 +3,22 @@ import { View, TouchableOpacity, Text, TextInput, SafeAreaView, StyleSheet } fro
 import { WebView } from 'react-native-webview';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { FiltersEngine, Request } from '@cliqz/adblocker';
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync()
 
 export default function Index() {
+  useEffect(() => {
+    const prepare = async () => {
+      await SplashScreen.hideAsync();
+    };
+    prepare();
+  }, []);
+
   const [menu, setMenu] = useState(null);
   const [contentName, setContentName] = useState(null);
   const [TMDB_Id, setTMDBId] = useState(null);
-  const API_KEY = 'YOUR TMDB API KEY';
+  const API_KEY = process.env.TMDB_API;
   const searchType = menu === 'Movies' ? 'movie' : 'tv';
   const URL = TMDB_Id ? `https://vidsrc.net/embed/${searchType}?tmdb=${TMDB_Id}` : '';
 
